@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>立山黑部開發史｜貫穿北阿爾卑斯的二十年</title>
+<meta name="description" content="立山黑部阿爾卑斯山脈路線開發史完整整理：1952-1971年間六種交通工具、五大工程章節、破砕帯湧水危機與世界首見無支柱纜車，如何在北阿爾卑斯山脈鑿出一條路。">
+<meta property="og:title" content="立山黑部開發史｜貫穿北阿爾卑斯的二十年">
+<meta property="og:description" content="一群人耗時二十年，把富山與長野之間的北阿爾卑斯山脈，用六種交通工具串成一條路。">
+<meta property="og:image" content="https://maskywg.github.io/tateyama-kurobe-development/images/hero-daikanbo.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c1520;
+    --bg-alt:rgba(63,124,172,0.06);
+    --panel:rgba(28,42,58,0.55);
+    --line:rgba(201,178,120,0.14);
+    --ink:#e9eef4;
+    --ink-dim:#b9c3cf;
+    --ink-faint:#7c8a99;
+    --primary:#3f7cac;
+    --primary-soft:rgba(63,124,172,0.18);
+    --gold:#d4a13c;
+    --gold-soft:rgba(212,161,60,0.18);
+    --danger:#c0463a;
+    --danger-soft:rgba(192,70,58,0.16);
+    --ice:#8fb8d8;
+    --shadow: 0 20px 50px rgba(0,0,0,0.45);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    color:var(--ink);
+    font-family:"Noto Sans TC", sans-serif;
+    line-height:1.85;
+    font-weight:300;
+    background:
+      radial-gradient(ellipse 60% 45% at 8% 4%, rgba(63,124,172,0.30), transparent 60%),
+      radial-gradient(ellipse 55% 50% at 96% 14%, rgba(212,161,60,0.22), transparent 62%),
+      radial-gradient(ellipse 55% 45% at 90% 46%, rgba(63,124,172,0.26), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 2% 56%, rgba(192,70,58,0.14), transparent 62%),
+      radial-gradient(ellipse 55% 45% at 94% 82%, rgba(212,161,60,0.18), transparent 60%),
+      radial-gradient(ellipse 60% 45% at 6% 96%, rgba(63,124,172,0.24), transparent 60%),
+      linear-gradient(180deg, #101c28 0%, #0d1822 40%, #0a141c 100%);
+    background-attachment:fixed;
+  }
+  h1,h2,h3,h4{
+    font-family:"Noto Serif TC", serif;
+    font-weight:700;
+    color:var(--ink);
+    letter-spacing:0.02em;
+  }
+  a{color:var(--gold);}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:flex-end;
+    background:#000;
+    overflow:hidden;
+  }
+  .hero img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    opacity:0.82;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(8,12,18,0.35) 0%, rgba(8,12,18,0.25) 35%, rgba(8,12,18,0.95) 100%);
+  }
+  .hero-content{
+    position:relative; z-index:2;
+    width:100%;
+    padding:0 24px 7vh;
+    max-width:1080px;
+    margin:0 auto;
+  }
+  .hero-eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:"Noto Serif TC", serif;
+    font-size:0.85rem;
+    letter-spacing:0.35em;
+    color:var(--gold);
+    margin-bottom:22px;
+    text-transform:uppercase;
+  }
+  .hero-eyebrow::before{content:"—"; color:var(--primary);}
+  .hero h1{
+    font-size:clamp(2.4rem, 6.6vw, 4.8rem);
+    line-height:1.1;
+    margin-bottom:18px;
+    text-shadow:0 6px 30px rgba(0,0,0,0.6);
+  }
+  .hero h1 small{
+    display:block;
+    font-size:0.32em;
+    font-weight:400;
+    color:var(--ink-dim);
+    letter-spacing:0.16em;
+    margin-top:14px;
+  }
+  .hero-desc{
+    max-width:600px;
+    color:var(--ink-dim);
+    font-size:1.05rem;
+    margin-bottom:28px;
+  }
+  .hero-tags{display:flex; flex-wrap:wrap; gap:10px;}
+  .tag{
+    border:1px solid var(--line);
+    padding:6px 16px;
+    border-radius:999px;
+    font-size:0.82rem;
+    color:var(--ink-dim);
+    background:rgba(0,0,0,0.25);
+    backdrop-filter:blur(4px);
+  }
+  .scroll-cue{
+    position:absolute; bottom:26px; left:50%; transform:translateX(-50%);
+    z-index:2; color:var(--ink-faint); font-size:0.75rem; letter-spacing:0.2em;
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+  }
+  .scroll-cue span{
+    width:1px; height:34px; background:linear-gradient(var(--gold), transparent);
+    animation:scrollpulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollpulse{0%,100%{opacity:0.2;}50%{opacity:1;}}
+
+  /* ---------- Section shell ---------- */
+  section{padding:110px 0;}
+  .section-head{margin-bottom:56px; max-width:660px;}
+  .kicker{
+    font-size:0.8rem; letter-spacing:0.3em; color:var(--primary);
+    font-family:"Noto Serif TC", serif; margin-bottom:14px; text-transform:uppercase;
+  }
+  .kicker.gold{color:var(--gold);}
+  .kicker.danger{color:var(--danger);}
+  .section-head h2{font-size:clamp(1.8rem,3.6vw,2.6rem); margin-bottom:16px;}
+  .section-head p{color:var(--ink-dim); font-size:1.02rem;}
+  .alt{background:var(--bg-alt);}
+
+  /* ---------- Intro strip ---------- */
+  .intro-grid{
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center;
+  }
+  .intro-grid p{color:var(--ink-dim); margin-bottom:16px; font-size:1.02rem;}
+  .intro-grid p b{color:var(--ink); font-weight:500;}
+  .stat-card{
+    background:var(--panel); border:1px solid var(--line); border-radius:4px;
+    padding:22px 24px;
+    backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  }
+  .stat-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .stat-num{
+    font-family:"Noto Serif TC",serif; font-size:1.6rem; color:var(--gold); font-weight:700;
+  }
+  .stat-label{font-size:0.82rem; color:var(--ink-faint); margin-top:4px;}
+
+  /* ---------- Timeline ---------- */
+  .timeline{position:relative; margin-top:10px;}
+  .timeline::before{
+    content:""; position:absolute; left:150px; top:6px; bottom:6px; width:1px;
+    background:linear-gradient(var(--primary), var(--gold), transparent);
+  }
+  .t-row{display:grid; grid-template-columns:150px 1fr; gap:30px; position:relative; padding:0 0 40px 0;}
+  .t-row:last-child{padding-bottom:0;}
+  .t-year{
+    font-family:"Noto Serif TC",serif; color:var(--gold); font-weight:700; font-size:0.95rem;
+    text-align:right; padding-top:2px;
+  }
+  .t-body{position:relative; padding-left:28px;}
+  .t-body::before{
+    content:""; position:absolute; left:-5px; top:8px; width:9px; height:9px;
+    border-radius:50%; background:var(--primary); box-shadow:0 0 0 4px var(--bg);
+  }
+  .t-body h4{font-size:1.05rem; margin-bottom:6px; color:var(--ink);}
+  .t-body p{color:var(--ink-dim); font-size:0.96rem;}
+
+  /* ---------- Feature (image + text) ---------- */
+  .feature{
+    display:grid; grid-template-columns:0.9fr 1.1fr; gap:0;
+    border:1px solid var(--line); border-radius:6px; overflow:hidden;
+    background:var(--panel);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+  }
+  .feature.reverse{grid-template-columns:1.1fr 0.9fr;}
+  .feature.reverse .feature-img{order:2;}
+  .feature img{height:100%; object-fit:cover; min-height:340px;}
+  .feature-body{padding:44px 44px;}
+  .feature-body h3{font-size:1.5rem; margin-bottom:16px;}
+  .feature-body p{color:var(--ink-dim); margin-bottom:14px;}
+
+  /* ---------- Spot / difficulty grid ---------- */
+  .spot-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:2px; background:var(--line); border:1px solid var(--line); border-radius:6px; overflow:hidden;}
+  .spot{background:var(--panel); padding:32px 30px; backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);}
+  .spot-num{font-family:"Noto Serif TC",serif; color:var(--primary); font-size:0.85rem; letter-spacing:0.1em; margin-bottom:10px;}
+  .spot h4{font-size:1.2rem; margin-bottom:6px;}
+  .spot .spot-sub{color:var(--gold); font-size:0.85rem; margin-bottom:12px; display:block;}
+  .spot p{color:var(--ink-dim); font-size:0.95rem;}
+  .spot p+p{margin-top:8px;}
+
+  /* ---------- Banner ---------- */
+  .banner{
+    position:relative; min-height:64vh; display:flex; align-items:center; overflow:hidden;
+  }
+  .banner img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+  .banner::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(90deg, rgba(8,12,18,0.92) 10%, rgba(8,12,18,0.35) 60%, rgba(8,12,18,0.15) 100%);
+  }
+  .banner .wrap{position:relative; z-index:2;}
+  .banner-box{max-width:500px;}
+  .banner-box .kicker{color:var(--gold);}
+  .banner-box h2{font-size:clamp(1.7rem,3.4vw,2.3rem); margin-bottom:16px;}
+  .banner-box p{color:var(--ink-dim);}
+
+  /* ---------- Guide cards ---------- */
+  .guide-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .guide-card{
+    background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:28px 26px;
+    backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  }
+  .guide-card .icon{
+    width:40px; height:40px; border-radius:50%; background:var(--primary-soft); color:var(--ice);
+    display:flex; align-items:center; justify-content:center; font-size:1.1rem; margin-bottom:16px;
+  }
+  .guide-card h4{font-size:1.05rem; margin-bottom:10px;}
+  .guide-card p{color:var(--ink-dim); font-size:0.92rem;}
+  .guide-card p+p{margin-top:8px;}
+
+  /* ---------- Route relay ---------- */
+  .route{margin-top:12px;}
+  .route-step{
+    display:grid; grid-template-columns:44px 1fr; gap:20px; padding:20px 0; border-top:1px solid var(--line);
+  }
+  .route-step:first-child{border-top:none;}
+  .route-dot{
+    width:36px; height:36px; border-radius:50%; border:1px solid var(--gold); color:var(--gold);
+    display:flex; align-items:center; justify-content:center; font-family:"Noto Serif TC",serif; font-size:0.9rem;
+  }
+  .route-step h4{font-size:1.02rem; margin-bottom:6px; display:flex; gap:10px; align-items:baseline; flex-wrap:wrap;}
+  .route-step h4 .time{font-size:0.78rem; color:var(--ink-faint); font-weight:400; font-family:"Noto Sans TC",sans-serif;}
+  .route-step p{color:var(--ink-dim); font-size:0.92rem;}
+
+  /* ---------- Info table ---------- */
+  .info-table{width:100%; border-collapse:collapse; font-size:0.95rem;}
+  .info-table tr{border-top:1px solid var(--line);}
+  .info-table tr:first-child{border-top:none;}
+  .info-table td{padding:14px 10px; color:var(--ink-dim); vertical-align:top;}
+  .info-table td:first-child{color:var(--gold); width:170px; font-family:"Noto Serif TC",serif; white-space:nowrap;}
+
+  /* ---------- Chips ---------- */
+  .chip-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px;}
+  .chip{
+    background:var(--gold-soft); border:1px solid rgba(212,161,60,0.35); color:var(--gold);
+    padding:8px 18px; border-radius:999px; font-size:0.88rem;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:#0a1219; padding:60px 0 34px; border-top:1px solid var(--line);
+  }
+  footer .wrap{display:flex; flex-direction:column; gap:18px; align-items:flex-start;}
+  footer h3{font-size:1.3rem;}
+  footer p{color:var(--ink-faint); font-size:0.86rem; max-width:520px;}
+  .src-list{list-style:none; margin-top:6px;}
+  .src-list li{color:var(--ink-faint); font-size:0.82rem; margin-bottom:4px;}
+  .src-list a{color:var(--ink-dim);}
+
+  @media (max-width:860px){
+    .intro-grid{grid-template-columns:1fr;}
+    .feature{grid-template-columns:1fr;}
+    .feature.reverse .feature-img{order:0;}
+    .feature img{min-height:240px;}
+    .spot-grid{grid-template-columns:1fr;}
+    .guide-grid{grid-template-columns:1fr;}
+    .timeline::before{left:78px;}
+    .t-row{grid-template-columns:78px 1fr; gap:16px;}
+    .banner{min-height:52vh;}
+    .banner .wrap{padding:0 24px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <img src="images/hero-daikanbo.jpg" alt="立山空中纜車橫跨深谷雪山，一條沒有任何支柱的長索道，遠方立山連峰雪白山巒與夕陽金光">
+  <div class="hero-content">
+    <div class="hero-eyebrow">富山県・長野県 / 北阿爾卑斯</div>
+    <h1>立山黑部開發史
+      <small>TATEYAMA KUROBE ALPINE ROUTE — 貫穿北阿爾卑斯的二十年</small>
+    </h1>
+    <p class="hero-desc">1952年到1971年，一群人用纜車、巴士、無軌電車、纜索、隧道——六種交通工具，把富山與長野之間三千公尺等級的北阿爾卑斯山脈鑿穿、架起、接通。這不是一條天然存在的路，是花了二十年，一段一段用命拼出來的路。</p>
+    <div class="hero-tags">
+      <span class="tag">建設期間 1952–1971</span>
+      <span class="tag">六種交通工具接力</span>
+      <span class="tag">海拔2,450m 日本最高住宿設施</span>
+      <span class="tag">世界首見無支柱纜車</span>
+    </div>
+  </div>
+  <div class="scroll-cue"><span></span>SCROLL</div>
+</header>
+
+<!-- ================= OVERVIEW ================= -->
+<section>
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <div class="kicker">Overview</div>
+        <h2 style="margin-bottom:22px;">一個人的願景，<br>一座山脈的二十年</h2>
+        <p><b>佐伯宗義</b>，1930年創立富山電気鉄道（後來的富山地方鉄道）的實業家兼政治家，一生懷抱著「日本海側與太平洋側均衡發展」的理念。他把立山連峰所在的這片山岳地帶稱為「立山自然麗嶽殿」，並構想出一條貫穿山脈、連接富山與長野的觀光交通路線。</p>
+        <p>1952年（昭和27年）4月，由富山地方鉄道、關西電力、北陸電力三家公司合資成立<b>立山開発鉄道</b>，正式啟動這項計畫。公司名稱後來定為「<b>貫光</b>」——「貫」取時間之意，「光」取宇宙空間之意，同時也暗喻著「貫穿立山連峰」。這個帶著哲學意味的命名，成了往後二十年工程的精神註腳。</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-grid">
+          <div>
+            <div class="stat-num">約20年</div>
+            <div class="stat-label">1952年動工至1971年全線開通</div>
+          </div>
+          <div>
+            <div class="stat-num">六種</div>
+            <div class="stat-label">纜車・巴士・無軌電車・纜索・隧道接力</div>
+          </div>
+          <div>
+            <div class="stat-num">3.7km</div>
+            <div class="stat-label">立山隧道全長，貫穿破砕帯的最後一哩</div>
+          </div>
+          <div>
+            <div class="stat-num">1,710m</div>
+            <div class="stat-label">立山ロープウェイ無支柱纜索全長</div>
+          </div>
+          <div>
+            <div class="stat-num">63噸/分</div>
+            <div class="stat-label">立山隧道施工中湧出的地下水量</div>
+          </div>
+          <div>
+            <div class="stat-num">2,450m</div>
+            <div class="stat-label">立山飯店海拔，日本最高住宿設施</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TIMELINE ================= -->
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker gold">History</div>
+      <h2>五個章節，接力鑿穿一整座山脈</h2>
+      <p>從立山纜車動工到立山飯店開幕，整條路線分成五個工程階段陸續完成，每一段都各自解決了不同的地形與技術難題。以下時間軸整理公司沿革與五大工程的關鍵節點。</p>
+    </div>
+    <div class="timeline">
+      <div class="t-row">
+        <div class="t-year">1930年</div>
+        <div class="t-body">
+          <h4>佐伯宗義創立富山電気鉄道</h4>
+          <p>「一県一市街化」構想的起點，也是日後立山黑部開發計畫的企業根基，即今日富山地方鉄道的前身。</p>
+        </div>
+      </div>
+      <div class="t-row">
+        <div class="t-year">1952年4月</div>
+        <div class="t-body">
+          <h4>立山開発鉄道成立</h4>
+          <p>富山地方鉄道、關西電力、北陸電力三社合資，以整備立山山岳地域觀光交通體系為目標，同月立山纜車動工，二十年工程正式揭幕。</p>
+        </div>
+      </div>
+      <div class="t-row">
+        <div class="t-year">1954–1964年</div>
+        <div class="t-body">
+          <h4>立山纜車與高原巴士陸續完成</h4>
+          <p>1954年8月立山纜車開通；高原巴士路線分段延伸，1964年6月終於抵達室堂，總長23公里，爬升約1,500公尺。</p>
+        </div>
+      </div>
+      <div class="t-row">
+        <div class="t-year">1964年12月</div>
+        <div class="t-body">
+          <h4>立山黑部貫光株式会社成立</h4>
+          <p>與立山開発鉄道並行存在的新公司，日後負責黑部纜車、立山ロープウェイ等長野側後段工程的興建與營運。</p>
+        </div>
+      </div>
+      <div class="t-row">
+        <div class="t-year">1966–1970年</div>
+        <div class="t-body">
+          <h4>黑部纜車、立山隧道、立山ロープウェイ相繼動工</h4>
+          <p>三項最艱難的地下與高空工程同時展開，分別在1969至1970年間陸續通車，是整條路線技術難度最高的階段。</p>
+        </div>
+      </div>
+      <div class="t-row">
+        <div class="t-year">1971年6月</div>
+        <div class="t-body">
+          <h4>全線開通</h4>
+          <p>立山隧道巴士通車、高原巴士除雪作業完成後，立山黑部アルペンルート正式全線貫通，從動工算起，歷時約二十年。</p>
+        </div>
+      </div>
+      <div class="t-row">
+        <div class="t-year">1972年9月</div>
+        <div class="t-body">
+          <h4>立山飯店開幕</h4>
+          <p>海拔2,450公尺，日本最高住宿設施，兼具旅館、救護與避難機能，為這段二十年工程畫下最後一筆。</p>
+        </div>
+      </div>
+      <div class="t-row">
+        <div class="t-year">2005年10月</div>
+        <div class="t-body">
+          <h4>立山黑部貫光吸收合併立山開発鉄道</h4>
+          <p>兩家並行了半世紀的公司正式合而為一，統一以「立山黒部貫光株式会社」之名，經營至今的整條路線。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CHAPTER 1+2 : CABLE CAR & BUS ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Chapter 1–2 · 1952–1964</div>
+      <h2>第一步：把巴士吊上山</h2>
+      <p>整條路線最先動工的，是立山站到美女平之間僅1.3公里的立山纜車——距離很短，工程卻一點都不簡單。</p>
+    </div>
+    <div class="feature">
+      <img class="feature-img" src="images/hillside-cablecar.jpg" alt="1950年代山岳纜車車廂沿著陡峭山坡軌道爬升，周圍針葉林環繞，山下平原雲霧繚繞">
+      <div class="feature-body">
+        <div class="kicker">Winding Track</div>
+        <h3>1.3公里，繞了一年多才定案</h3>
+        <p>1952年12月動工的立山纜車，路線雖短，但沿線彎道眾多、坡度複雜，光是軌道線形的設計就耗費超過一年。1954年8月纜車正式開通；隔年因為真川橋梁的興建延誤，還一度在左岸設置「臨時立山站」應急，直到1955年橋梁完工，富山到立山的鐵路線才算真正連通。</p>
+        <p>纜車通了之後，下一段美女平到室堂的高原巴士道路又是另一場硬仗——1953年動工，起初只通到弘法一段，早期的巴士甚至得先裝上立山纜車的貨運車廂運上山，再用繩索一段段吊起，才能繼續往上鋪路。這段路直到1964年6月才全線貫通至室堂，全長23公里，爬升約1,500公尺，沿線的彌陀原站與天狗平，至今仍是重要的中繼站。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CHAPTER 3 : UNDERGROUND CABLE CAR ================= -->
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker gold">Chapter 3 · 1964–1969</div>
+      <h2>第二步：把纜車藏進山裡</h2>
+      <p>黑部纜車原本的計畫是興建一條公路，但施工難度高、成本昂貴，加上環保與雪害的考量，最終改弦易轍，成為日本唯一一條全線地下化的纜車。</p>
+    </div>
+    <div class="feature reverse">
+      <img class="feature-img" src="images/kurobe-cablecar-underground.jpg" alt="黑部纜車地下站月台，全隧道式地下纜車站設計，弧形水泥隧道牆面，展現全日本唯一全線地下化纜車的工程美學">
+      <div class="feature-body">
+        <div class="kicker">Underground by Design</div>
+        <h3>不是蓋不出地面纜車，是選擇不蓋</h3>
+        <p>1964年，關西電力經營的無軌電車已經先一步在扇沢與黑部湖之間營運，成為西側入口的接駁動脈。輪到黑部纜車登場時，工程團隊評估了興建高架或地面路線的方案，但陡峭地形加上頻繁的雪崩落石，讓地面工程的成本與風險都難以承受。</p>
+        <p>1966年3月正式開始挖掘，最終方案是把整條纜車路線完全埋進山體之中，同步達成防災與環保兩個目標。由於施工現場位處陡峭懸崖，材料與機械只能靠索道、甚至出動大型直昇機才能運抵。1969年7月，黑部纜車舉行通車儀式，成為全日本唯一一條全線地下化的纜車路線。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CHAPTER 4 BANNER : ROPEWAY ================= -->
+<section class="banner">
+  <img src="images/rope-transport.jpg" alt="工業拖車沿著隧道與水壩堰堤頂部運送直徑超粗的鋼纜，背景是黑部水庫壩體與雪山湖水">
+  <div class="wrap">
+    <div class="banner-box">
+      <div class="kicker gold">Chapter 4 · 1969–1970</div>
+      <h2>第三步：造一條沒有柱子的纜車</h2>
+      <p>連接大観峰與黑部平的立山ロープウェイ，全長1,710公尺，中途沒有任何一根支撐柱——是日本首見的「單跨式」纜索工程，也是這條路線技術含金量最高的一段。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CHAPTER 4 DETAIL ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">World-First Engineering</div>
+      <h2>一根28噸的鋼纜，是怎麼被送上山的</h2>
+      <p>這一帶雪崩與落石頻繁，為了不在山谷中立柱、把破壞環境的機會降到最低，工程團隊決定挑戰前所未有的無支柱單跨設計——但要撐起1,710公尺的跨距，得先解決纜索本身的問題。</p>
+    </div>
+    <div class="spot-grid">
+      <div class="spot">
+        <div class="spot-num">01 · 規格</div>
+        <h4>專門開發的高性能纜索</h4>
+        <p>1,710公尺的跨距超過當時的法定限值，最終取得特別許可才得以興建。</p>
+        <p>為此工程量身開發的高性能鋼纜，直徑達5.4公分，單根重量高達28噸。</p>
+      </div>
+      <div class="spot">
+        <div class="spot-num">02 · 運輸</div>
+        <h4>28噸鋼纜的最後一哩路</h4>
+        <p>這麼重的纜索，立山纜車根本無法運送，最後改用拖車，一路經由關電隧道、越過黑部水庫堰堤頂端，才把它運到施工現場。</p>
+      </div>
+      <div class="spot">
+        <div class="spot-num">03 · 試運轉</div>
+        <h4>暴風雪中的第一次測試</h4>
+        <p>1969年12月，纜索終於架設完成，工程團隊選擇在猛烈的暴風雪中進行運行測試——山區施工季節有限，等不起下一個好天氣。</p>
+      </div>
+      <div class="spot">
+        <div class="spot-num">04 · 通車</div>
+        <h4>1970年7月正式營運</h4>
+        <p>大観峰站建於標高2,316公尺的斷崖絕壁上，通車後，這條沒有一根柱子的纜索，成了整條路線最具代表性的畫面之一。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CHAPTER 5 : TUNNEL ================= -->
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker danger">Chapter 5 · 1966–1971</div>
+      <h2>第四步：與破砕帯搏鬥的五年</h2>
+      <p>立山隧道是整條路線最後、也最艱難的一段——3.7公里的距離,原本應該是相對單純的工程,卻因為地質條件,拖成了一場長達五年的攻防戰。</p>
+    </div>
+    <div class="feature">
+      <img class="feature-img" src="images/tunnel-breakthrough.jpg" alt="1960年代隧道工程現場，工程人員在昏暗隧道中對抗大量湧出的泥水與岩層崩落，探照燈光束穿透水霧">
+      <div class="feature-body">
+        <div class="kicker danger">The Breccia Zone</div>
+        <h3>每分鐘63噸，攝氏2.5度的敵人</h3>
+        <p>1966年4月，室堂與黑部水庫兩端同時開挖立山隧道。挖到一半，工程隊一再撞上「破砕帯」——地質學上指軟弱、破碎的岩層帶，湧水與崩落的風險都極高。最嚴重的一次，每分鐘竟湧出高達63噸、攝氏僅2.5度的泥水，濁流灌進隧道，工程被迫多次中斷。</p>
+        <p>面對破砕帯，工程人員能做的只有兩件事：繞開它，或是灌注化學藥劑把地層加固後再繼續挖。隧道裡除了設計上的兩處大彎道之外，還多出三處看似多餘的輕微迂迴——那不是設計失誤，而是每一次繞開破砕帯留下的施工痕跡，是這條隧道走過的路,比地圖上看起來曲折得多。</p>
+        <p>1969年12月，隧道終於貫通；直到1971年4月，隧道巴士才正式通車——足足晚了兩年，是整條路線裡拖得最久、也最驚險的一段。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SIX RELAY ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker gold">The Relay</div>
+      <h2>六種交通工具，接力貫穿一座山脈</h2>
+      <p>全線開通後，旅客要從富山側走到長野側，得依序換乘六種完全不同的交通工具——這也是立山黑部路線最獨特的地方：沒有一種單一載具能獨自完成這趟旅程,因為沒有一段地形是一樣的。</p>
+    </div>
+    <div class="route">
+      <div class="route-step">
+        <div class="route-dot">1</div>
+        <div>
+          <h4>立山纜車 <span class="time">立山站 → 美女平</span></h4>
+          <p>1954年通車，1.3公里彎道密集的登山纜車，是整趟旅程的起點。</p>
+        </div>
+      </div>
+      <div class="route-step">
+        <div class="route-dot">2</div>
+        <div>
+          <h4>高原巴士 <span class="time">美女平 → 室堂</span></h4>
+          <p>1964年全線貫通，23公里山路爬升約1,500公尺，沿途經過彌陀原、天狗平。</p>
+        </div>
+      </div>
+      <div class="route-step">
+        <div class="route-dot">3</div>
+        <div>
+          <h4>立山隧道巴士 <span class="time">室堂 → 大観峰</span></h4>
+          <p>1971年通車，穿越3.7公里、歷經五年破砕帯攻防戰才貫通的立山隧道。</p>
+        </div>
+      </div>
+      <div class="route-step">
+        <div class="route-dot">4</div>
+        <div>
+          <h4>立山ロープウェイ <span class="time">大観峰 → 黑部平</span></h4>
+          <p>1970年通車，1,710公尺日本首見無支柱單跨纜索，飛越整座深谷。</p>
+        </div>
+      </div>
+      <div class="route-step">
+        <div class="route-dot">5</div>
+        <div>
+          <h4>黑部纜車 <span class="time">黑部平 → 黑部湖</span></h4>
+          <p>1969年通車，全日本唯一全線地下化的纜車，為了防雪害與環保而藏進山體。</p>
+        </div>
+      </div>
+      <div class="route-step">
+        <div class="route-dot">6</div>
+        <div>
+          <h4>關電隧道無軌電車 <span class="time">黑部湖 → 扇沢</span></h4>
+          <p>1964年起營運，穿越關電隧道抵達長野側終點扇沢，完成整趟山脈貫穿。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 1972 HOTEL BANNER ================= -->
+<section class="banner" style="min-height:56vh;">
+  <img src="images/hotel-tateyama-snow.jpg" alt="海拔2450公尺的高山飯店建築矗立在雪山之中，暮色中窗戶透出溫暖燈光，四周被立山連峰環繞">
+  <div class="wrap">
+    <div class="banner-box">
+      <div class="kicker gold">1972</div>
+      <h2>二十年工程的最後一筆：立山飯店</h2>
+      <p>全線開通的隔年，1972年9月，海拔2,450公尺的立山飯店開幕，是日本海拔最高的住宿設施。它不只是一間旅館，同時肩負著公共救護與避難中心的功能——在這片二十年前還是無路可通的山脈深處，終於有了一盞永遠亮著的燈。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS TABLE ================= -->
+<section>
+  <div class="wrap">
+    <div class="intro-grid" style="align-items:start;">
+      <div>
+        <div class="kicker">Data</div>
+        <h2 style="margin-bottom:22px;">建設數據總覽</h2>
+        <table class="info-table">
+          <tr><td>建設期間</td><td>1952年12月–1971年6月（約20年）</td></tr>
+          <tr><td>立山纜車</td><td>1.3km，1954年8月通車</td></tr>
+          <tr><td>高原巴士道路</td><td>23km，爬升約1,500m，1964年6月全線貫通</td></tr>
+          <tr><td>黑部纜車</td><td>全線地下化，1969年7月通車</td></tr>
+          <tr><td>立山ロープウェイ</td><td>1,710m無支柱單跨，鋼纜直徑5.4cm・重28噸，1970年7月通車</td></tr>
+          <tr><td>立山隧道</td><td>3.7km，1969年12月貫通，1971年4月通車</td></tr>
+          <tr><td>立山飯店</td><td>海拔2,450m，1972年9月開幕，日本最高住宿設施</td></tr>
+        </table>
+      </div>
+      <div class="stat-card">
+        <div class="kicker gold" style="margin-bottom:12px;">Legacy</div>
+        <p style="color:var(--ink-dim); font-size:0.95rem; margin-bottom:14px;">今天旅客花不到一天就能走完的路線，是當年工程團隊用二十年、跨越五個工程章節、對抗破砕帯與雪崩換來的成果。「貫光」這個名字裡藏著的「貫穿立山連峰」的願景，最終真的成真了。</p>
+        <p style="color:var(--ink-dim); font-size:0.95rem;">2005年10月，立山黑部貫光吸收合併立山開発鉄道，兩家並行半世紀的公司合而為一,統一經營這條至今仍在運行的路線。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KEYWORDS ================= -->
+<section class="alt">
+  <div class="wrap">
+    <div class="kicker gold">Keywords</div>
+    <h2 style="margin-bottom:22px;">關於這條路線的關鍵字</h2>
+    <div class="chip-row">
+      <span class="chip">佐伯宗義</span>
+      <span class="chip">立山黒部貫光</span>
+      <span class="chip">破砕帯</span>
+      <span class="chip">無支柱單跨纜索</span>
+      <span class="chip">全線地下化纜車</span>
+      <span class="chip">大観峰</span>
+      <span class="chip">立山飯店</span>
+      <span class="chip">日本最高住宿設施</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <h3>立山黑部開發史</h3>
+    <p>立山黑部アルペンルート的興建歷程，是1952年到1971年間耗時約二十年的山岳交通工程史。本頁內容整理自立山黒部アルペンルート公式網站、立山黒部貫光株式会社公司沿革、Wikipedia等公開資料，圖片為AI生成之示意插畫，僅供氛圍參考，實際歷史細節請以官方資料為準。</p>
+    <ul class="src-list">
+      <li>資料來源：<a href="https://tw.alpen-route.com/en/development/" target="_blank" rel="noopener">立山黒部アルペンルート官網｜Development</a></li>
+      <li>資料來源：<a href="https://www.alpen-route.com/enjoy_navi/history_exploring/development.html" target="_blank" rel="noopener">立山黒部アルペンルート官網｜立山黒部の開発と観光</a></li>
+      <li>資料來源：<a href="https://tkk.alpen-route.co.jp/company/development" target="_blank" rel="noopener">立山黒部貫光株式会社｜会社の沿革</a></li>
+      <li>資料來源：<a href="https://tkk.alpen-route.co.jp/company/kanko" target="_blank" rel="noopener">立山黒部貫光株式会社｜社名の由来について</a></li>
+      <li>資料來源：<a href="https://ja.wikipedia.org/wiki/%E4%BD%90%E4%BC%AF%E5%AE%97%E7%BE%A9" target="_blank" rel="noopener">Wikipedia「佐伯宗義」</a></li>
+      <li>資料來源：<a href="https://ja.wikipedia.org/wiki/%E7%AB%8B%E5%B1%B1%E9%BB%92%E9%83%A8%E8%B2%AB%E5%85%89" target="_blank" rel="noopener">Wikipedia「立山黒部貫光」</a></li>
+      <li>資料來源：<a href="https://ja.wikipedia.org/wiki/%E7%AB%8B%E5%B1%B1%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4" target="_blank" rel="noopener">Wikipedia「立山ロープウェイ」</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
